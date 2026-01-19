@@ -966,3 +966,183 @@ color: #4d5ae5;
  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
+
+/* ================= MOBILE-FIRST ADAPTIVE ================= */
+
+/* =================== 1158px and below =================== */
+@media (max-width: 1158px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .features-list {
+        gap: 16px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .features-item {
+        width: calc((100% - 48px)/2);
+        /* дві колонки замість чотирьох */
+    }
+
+    .team-list {
+        gap: 16px;
+        justify-content: space-between;
+    }
+
+    .team-item {
+        flex: 1 1 calc((100% - 48px)/2);
+    }
+
+    .portfolio-item {
+        flex: 0 0 calc((100% - 36px)/2);
+        /* дві колонки */
+    }
+
+    .hero-title {
+        font-size: 48px;
+        max-width: 400px;
+    }
+
+    .hero {
+        padding: 120px 0;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .form-footer {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .subscribe-button,
+    .email-input {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* =================== 768px and below =================== */
+@media (max-width: 767px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .nav {
+        gap: 24px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contacts {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .features-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-item {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .team-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-item {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .portfolio-list {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        max-width: 320px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .form-footer {
+        flex-direction: column;
+    }
+}
+
+/* =================== 480px and below (mobile) =================== */
+@media (max-width: 479px) {
+    .hero-title {
+        font-size: 28px;
+        max-width: 280px;
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .features-item,
+    .team-item,
+    .portfolio-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-list {
+        width: 100%;
+        gap: 4px;
+    }
+
+    .contacts-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-footer {
+        gap: 8px;
+    }
+
+    .subscribe-button,
+    .email-input {
+        width: 100%;
+    }
+}
