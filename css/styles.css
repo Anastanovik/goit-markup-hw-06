@@ -911,7 +911,7 @@ background-color: #31D0AA;
   margin-bottom: 24px;
 }
 .modal-textarea::placeholder {
- ont-weight: 400;
+  ont-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.04em;
@@ -967,71 +967,12 @@ color: #4d5ae5;
 }
 
 
-/* ================= MOBILE-FIRST ADAPTIVE ================= */
+/* ========================= */
+/* АДАПТИВНІСТЬ */
+/* ========================= */
 
-/* =================== 1158px and below =================== */
-@media (max-width: 1158px) {
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .features-list {
-        gap: 16px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .features-item {
-        width: calc((100% - 48px)/2);
-        /* дві колонки замість чотирьох */
-    }
-
-    .team-list {
-        gap: 16px;
-        justify-content: space-between;
-    }
-
-    .team-item {
-        flex: 1 1 calc((100% - 48px)/2);
-    }
-
-    .portfolio-item {
-        flex: 0 0 calc((100% - 36px)/2);
-        /* дві колонки */
-    }
-
-    .hero-title {
-        font-size: 48px;
-        max-width: 400px;
-    }
-
-    .hero {
-        padding: 120px 0;
-    }
-
-    .footer-container {
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    .form-footer {
-        margin-left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .subscribe-button,
-    .email-input {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-/* =================== 768px and below =================== */
-@media (max-width: 767px) {
+/* Мобільні екрани (до 768px) */
+@media (max-width: 768px) {
     .header .container {
         flex-direction: column;
         align-items: flex-start;
@@ -1039,91 +980,19 @@ color: #4d5ae5;
     }
 
     .nav {
-        gap: 24px;
+        flex-direction: column;
+        gap: 16px;
     }
 
     .nav-list {
         flex-direction: column;
-        gap: 8px;
+        gap: 16px;
     }
 
     .contacts {
         margin-left: 0;
         width: 100%;
-    }
-
-    .features-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .features-item {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .team-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-item {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .portfolio-list {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .portfolio-item {
-        width: 100%;
-    }
-
-    .hero-title {
-        font-size: 36px;
-        max-width: 320px;
-    }
-
-    .hero {
-        padding: 80px 0;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-    }
-
-    .form-footer {
-        flex-direction: column;
-    }
-}
-
-/* =================== 480px and below (mobile) =================== */
-@media (max-width: 479px) {
-    .hero-title {
-        font-size: 28px;
-        max-width: 280px;
-    }
-
-    .hero-button {
-        padding: 12px 24px;
-        height: 48px;
-        font-size: 14px;
-    }
-
-    .features-item,
-    .team-item,
-    .portfolio-item {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .nav-list {
-        width: 100%;
-        gap: 4px;
+        justify-content: flex-start;
     }
 
     .contacts-list {
@@ -1131,18 +1000,162 @@ color: #4d5ae5;
         gap: 8px;
     }
 
-    .footer-left,
-    .footer-right {
+    .hero {
+        padding: 120px 16px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        max-width: 100%;
+    }
+
+    .hero-button {
         width: 100%;
-        text-align: center;
+        min-width: unset;
+        padding: 16px;
+    }
+
+    .features-list {
+        justify-content: center;
+    }
+
+    .features-item {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .team-list {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .team-item {
+        flex: 1 1 100%;
+    }
+
+    .portfolio-list {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .portfolio-item {
+        flex: 1 1 100%;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
     }
 
     .form-footer {
-        gap: 8px;
+        margin-left: 0;
+        width: 100%;
     }
 
-    .subscribe-button,
+    .form-class-footer {
+        flex-direction: column;
+        gap: 16px;
+    }
+
     .email-input {
         width: 100%;
+    }
+
+    .subscribe-button {
+        width: 100%;
+    }
+}
+
+/* Планшетні екрани (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .features-list,
+    .team-list,
+    .portfolio-list {
+        justify-content: center;
+    }
+
+    .features-item {
+        width: calc((100% - 48px) / 2);
+    }
+
+    .team-item {
+        flex: 1 1 calc((100% - 48px) / 2);
+    }
+
+    .portfolio-item {
+        flex: 1 1 calc((100% - 48px) / 2);
+    }
+}
+
+/* Меню гамбургер (для мобільних) */
+@media (max-width: 768px) {
+    .nav {
+        position: relative;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        flex-direction: column;
+        padding: 16px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        position: relative;
+    }
+
+    .menu-toggle span {
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #2e2f42;
+        border-radius: 2px;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .menu-toggle span:nth-child(1) {
+        top: 6px;
+    }
+
+    .menu-toggle span:nth-child(2) {
+        top: 14px;
+    }
+
+    .menu-toggle span:nth-child(3) {
+        top: 22px;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 14px;
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 14px;
     }
 }
