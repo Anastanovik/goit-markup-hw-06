@@ -1037,6 +1037,17 @@ img {
     fill: #ffffff;
 }
 
+/*add*/
+.footer-form-input {
+    transition: border-color 250ms ease;
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus {
+    border-color: #31d0aa;
+    outline: none;
+}
+
 @media screen and (min-width: 768px) {
 
     .footer-container {
